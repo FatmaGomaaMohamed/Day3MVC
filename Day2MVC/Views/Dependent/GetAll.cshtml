@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+    <title>Dependence</title>
+</head>
+<body>
+    <h2>data Dependence</h2>
+    <p>@TempData["msg"]</p>
+    @foreach (var item in Model)
+    {
+        <a href="Edit/@item.SSN">
+            <div >
+                <ul>
+                    <li>Name: @item.Name</li>
+                    <li>Gender: @item.Sex</li>
+                    <li>BirthDate: @item.BirthDate</li>
+                    <li>Relationship: @item.Relationship</li>
+                </ul>
+            </div>
+        </a>
+    }
+    <a href="AddDependence">Add Dependence</a>
+</body>
+</html>

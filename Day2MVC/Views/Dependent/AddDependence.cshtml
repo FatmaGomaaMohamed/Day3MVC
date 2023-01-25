@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+<head>
+
+</head>
+<body style="text-align:center">
+    <h1>Add Dependence</h1>
+
+    <form action="Add">
+        <div>
+            <label>Name</label>
+            <input id="Name" name="name" type="text" />
+        </div>
+        <div>
+            <label>Birth Date</label>
+            <input id="BirthDate" name="BirthDate" type="text" />
+        </div>
+        <div >
+
+            <label>RelationShip</label>
+            <input id="RelationShip" name="Relationship" type="text" />
+        </div>
+        <div>
+
+            <label>Gender</label>
+            <input type="radio" id="Male" name="Sex" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" name="Sex" value="Female">
+            <label for="Female">Female</label>
+        </div>
+        <div>
+        </div>
+        <div>
+            <label>SSN</label>
+            <input id="SSN" name="SSN" type="text" value="@Context.Session.GetInt32("SSN")" />
+        </div>
+        <div>
+            <input type="submit" value="Add" />
+        </div>
+    </form>
+</body>
+</html>
