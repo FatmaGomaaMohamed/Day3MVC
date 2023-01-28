@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model EmployeeProject
+<form action="/Works_On/AddEmployee">
+    
+    <label>Employee</label>
+    <select id="EmpId" name="EmpId">
+        <option>Choose one</option>
+        @foreach (var employee in Model.employees)
+        {
+            <option value="@employee.SSN">@employee.FirstName</option>
+        }
+    </select>
+
+    <label>Project</label>
+    <select id="ProNum" name="ProNum">
+        <option>Choose one</option>
+        @foreach (var project in Model.projects)
+        {
+            <option value="@project.PNumber">@project.PName</option>
+        }
+    </select>
+    <div>
+        <label>Hours</label>
+        <input id="Hours" name="Hours" type="text" />
+    </div>
+    <input type="submit" value="Add" />
+</form>

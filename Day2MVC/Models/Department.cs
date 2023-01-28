@@ -13,6 +13,5 @@ namespace Day2MVC.Models
         [ForeignKey("EmpManage")]
         public virtual int? ESSN {get;set;}
         public virtual Employee EmpManage { get; set; }
-
     }
 }
