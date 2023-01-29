@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Project
+<form asp-action="Add" asp-controller="taghelpers" method="post">
+
+    <label asp-for="PName"></label>
+    <input asp-for="PName" class="form-control"/>
+
+    <label asp-for="Loc"></label>
+    <input asp-for="Loc" class="form-control" />
+
+    <label asp-for="DepartmentId"></label>
+    <select asp-for="DepartmentId" asp-items="ViewBag.Departments" class="form-control">
+        <option value="">Choose One</option>
+    </select>
+
+    <input type="submit" value="Add" />
+</form>

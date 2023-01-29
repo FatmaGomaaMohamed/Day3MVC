@@ -3,6 +3,8 @@ using Day2MVC.Models;
 using Microsoft.EntityFrameworkCore;
 using Day2MVC.ViewModels;
 using Microsoft.AspNetCore.Http;
+using System.Runtime.Intrinsics.Arm;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Day2MVC.Controllers
 {
@@ -18,7 +20,6 @@ namespace Day2MVC.Controllers
             List<Works_On> works_s=dbContext.Works_s.Include(n=>n.emp).Include(n=>n.pro).ToList();
             return View(works_s);
         }
-
         public IActionResult AddEmployee()
         {
             EmployeeProject employeeProject = new EmployeeProject()

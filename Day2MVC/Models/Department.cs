@@ -6,6 +6,7 @@ namespace Day2MVC.Models
     {
         [Key]
         public int Number { get; set; }
+        [Display(Name= "Department Name")]
         public string? Name { get; set; }
         public virtual List<Location>? locations { get; set; }
         public virtual List<Project>? projects { get; set; }

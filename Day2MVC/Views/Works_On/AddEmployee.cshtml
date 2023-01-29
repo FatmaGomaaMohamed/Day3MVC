@@ -5,7 +5,7 @@
 }
 @model EmployeeProject
 <form action="/Works_On/AddEmployee">
-    
+
     <label>Employee</label>
     <select id="EmpId" name="EmpId">
         <option>Choose one</option>
@@ -29,3 +29,14 @@
     </div>
     <input type="submit" value="Add" />
 </form>
+
+@*@using (Html.BeginForm("AddToDb", "htmlhelper", FormMethod.Post))
+{
+    @Html.LabelFor(m=>m.ESSN)
+    @Html.DropDownListFor(m=>m.ESSN,Model,"choose one")
+
+    @Html.LabelFor(m=>m.proNumber)
+    @Html.DropDownListFor(m=>m.ProNum,ViewBag.projects,"choose one")
+
+         <input type="submit" value="AddEmployee"/>
+}*@

@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<Project>
+<html>
+<head>
+    <title>Project</title>
+</head>
+<body>
+    <h2>Project Data</h2>
+
+    <div>
+        <ul>
+            
+            @foreach (var item in Model)
+            {
+                    <li>Project Number: @item.PNumber</li>
+                    <li>Project Name: @item.PName</li>
+                <li>Project Name: @item.Loc</li>
+            }
+
+        </ul>
+    </div>
+    <a href="/Department/AddDepartment">ADD employee to the project</a>
+    <a href="/Works_On/AddEmployee">ADD employee to the project</a>
+    <a href="/Project/Add">ADD project</a>
+</body>
+</html>

@@ -12,6 +12,7 @@ namespace Day2MVC.Models
         public List<Works_On>? works_Ons { get; set; }
         public Department? department { get; set; }
         [ForeignKey("department")]
+        [Display(Name = "Department")]
         public int? DepartmentId { get; set; }
     }
 }
