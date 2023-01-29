@@ -63,7 +63,7 @@ namespace Day2MVC
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Employee}/{action=Index}/{id?}");
+                pattern: "{controller=Validation}/{action=Index}/{id?}");
 
             app.Run();
         }

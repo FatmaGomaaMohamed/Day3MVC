@@ -3,6 +3,8 @@ using Day2MVC.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Day2MVC.ViewModels;
 
 namespace Day2MVC.Controllers
 {
@@ -32,5 +34,6 @@ namespace Day2MVC.Controllers
             dbContext.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+
     }
 }
