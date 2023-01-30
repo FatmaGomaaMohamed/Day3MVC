@@ -1,0 +1,12 @@
+﻿@model Works_On
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<label asp-for="proNumber"></label>
+<select asp-for="proNumber" asp-items="ViewBag.Projects" class="form-control"></select>
+
+
+<partial name="_hour" model="Model"></partial>

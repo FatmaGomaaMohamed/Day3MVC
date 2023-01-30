@@ -1,0 +1,36 @@
+﻿@model Works_On
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<h1>Edit employee project hour</h1>
+
+<form asp-action="EditEmpHour" asp-controller="Works_On" method="post">
+
+    <div class="form-group">
+        <label asp-for="ESSN"></label>
+        <select asp-for="ESSN" asp-items="ViewBag.Employees" class="form-control">
+            <option>Choose Employee</option>
+        </select>
+    </div>
+    <div class="form-group" id="projectsArea">
+        <label asp-for=" proNumber"></label>
+        <select asp-for=" proNumber" class="form-control">
+            <option>Choose Project</option>
+        </select>
+        <div class="form-group" id="hourArea">
+            <label asp-for="Hours"></label>
+            <input asp-for="Hours" class="form-control" />
+        </div>
+    </div>
+
+    <input type="submit" value="EditEmpHour" />
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<script src="/js/EditEmpProHour.js"></script>
